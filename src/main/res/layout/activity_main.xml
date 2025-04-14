@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name"
+        app:layout_constraintStart_toEndOf="@id/textViewName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewName"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewRoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll No:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextName"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextRoll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter your roll number"
+        app:layout_constraintStart_toEndOf="@id/textViewRoll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewRoll"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextRoll"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/textViewGender"
+        app:layout_constraintTop_toTopOf="@id/textViewGender"
+        android:layout_marginStart="8dp">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewBranch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Branch:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupGender"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerBranch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textViewBranch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewBranch"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewSubjects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subjects:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerBranch"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxAI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AI"
+        app:layout_constraintStart_toEndOf="@id/textViewSubjects"
+        app:layout_constraintTop_toTopOf="@id/textViewSubjects"
+        android:layout_marginStart="8dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxML"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ML"
+        app:layout_constraintStart_toEndOf="@id/checkBoxAI"
+        app:layout_constraintTop_toTopOf="@id/checkBoxAI"
+        android:layout_marginStart="8dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDBMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DBMS"
+        app:layout_constraintStart_toEndOf="@id/checkBoxML"
+        app:layout_constraintTop_toTopOf="@id/checkBoxML"
+        android:layout_marginStart="8dp" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxDBMS"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
